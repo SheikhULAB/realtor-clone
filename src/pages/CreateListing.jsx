@@ -124,17 +124,16 @@ export default function CreateListing() {
               (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             console.log("Upload is " + progress + "% done");
             switch (snapshot.state) {
-                case "paused":
-                  console.log("Upload is paused");
-                  break;
-                case "running":
-                  console.log("Upload is running");
-                  break;
-                default:
-                  console.log("Upload state is not recognized");
-                  break;
-              }
-              
+              case "paused":
+                console.log("Upload is paused");
+                break;
+              case "running":
+                console.log("Upload is running");
+                break;
+              default:
+                console.log("Upload state is not recognized");
+                break;  
+            }
           },
           (error) => {
             // Handle unsuccessful uploads
